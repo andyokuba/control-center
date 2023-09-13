@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockstar Games</title>
+    
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #navbar {
+            color: orange;
+        }
+        
+        #topnav {
+            margin-bottom: 10px;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+        
+        /* Custom CSS for "Click" Button */
+        .custom-navbar-button {
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .custom-navbar-button:hover {
+            background-color: #ff7f00;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse" id="topnav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color:black; background-color: #ff7f00;">
+                    Sign in
+                </button>
+                <a class="navbar-brand text-warning" id="navbar" href="#">Rockstar Games Gallery</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right" >
+                    <li><a style="color: white;" href="https://signin.rockstargames.com/connect/authorize/rsg?returnUrl=/&lang=en-us"><span class="glyphicon glyphicon-user"></span> Sign in</a></li>
+                    <li><a style="color: white;" href="https://signin.rockstargames.com/create/?cid=rsg&returnUrl=/&lang=en-us"><span class="glyphicon glyphicon-log-in"></span> Join Social Club</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <iframe src="https://www.rockstargames.com/"></iframe>
+    
+    <div id="section1" style="height: 100vh; background-color: #f0f0f0;">
+        <!-- Content for Section 1 -->
+        
+    </div>
+    
+    <div id="section2" style="height: 100vh; background-color: #e0e0e0;">
+        <!-- Content for Section 2 -->
+    </div>
+</body>
+</html>
