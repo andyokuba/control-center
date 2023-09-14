@@ -13,23 +13,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <style>
-        html, #main {
-            height: auto;
-            margin: 0;
-            padding: 0;
+        html, body {
+            height: 100%;
         }
         
         #navbar {
             color: orange;
         }
         
-        #topnav {
-            margin-bottom: 10px;
+        .iframe-container {
+            height: 80vh; /* 80% of the viewport height */
+            overflow: hidden;
         }
         
         iframe {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             border: none;
         }
         
@@ -46,42 +45,54 @@
         .custom-navbar-button:hover {
             background-color: #ff7f00;
         }
+
+        /* Style for the section below the iframe */
+        .section-container {
+            height: 20vh; /* 20% of the viewport height */
+            background-color: #f2f2f2; /* Optional background color */
+        }
     </style>
 </head>
 <body>
-<section id="main">
-    <nav class="navbar navbar-inverse" id="topnav">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color:black; background-color: #ff7f00;">
-                    Sign in
-                </button>
-                <a class="navbar-brand text-warning" id="navbar" href="#">Rockstar Games Gallery</a>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-inverse" id="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color:black; background-color: #ff7f00;">
+                        Sign in
+                    </button>
+                    <a class="navbar-brand text-warning" href="#" style="color:orange;">Rockstar Games Gallery</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" >
+                        <li><a style="color: white;" href="https://signin.rockstargames.com/connect/authorize/rsg?returnUrl=/&lang=en-us"><span class="glyphicon glyphicon-user"></span> Sign in</a></li>
+                        <li><a style="color: white;" href="https://signin.rockstargames.com/create/?cid=rsg&returnUrl=/&lang=en-us"><span class="glyphicon glyphicon-log-in"></span> Join Social Club</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right" >
-                    <li><a style="color: white;" href="https://signin.rockstargames.com/connect/authorize/rsg?returnUrl=/&lang=en-us"><span class="glyphicon glyphicon-user"></span> Sign in</a></li>
-                    <li><a style="color: white;" href="https://signin.rockstargames.com/create/?cid=rsg&returnUrl=/&lang=en-us"><span class="glyphicon glyphicon-log-in"></span> Join Social Club</a></li>
-                </ul>
-            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="iframe-container">
+            <iframe src="https://www.rockstargames.com/"></iframe>
         </div>
-    </nav>
-    
-    <iframe src="https://www.rockstargames.com/"></iframe>
-    
-</section>
-<section>
-    <script type="text/javascript">
-        atOptions = {
-            'key' : '19035b1e90361a9dfe2a33e52c952448',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-        document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/19035b1e90361a9dfe2a33e52c952448/invoke.js"></scr' + 'ipt>');
-    </script>
-</section>
+    </div>
+    <div class="row">
+        <div class="section-container" style="background-color:blue;">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '19035b1e90361a9dfe2a33e52c952448',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/19035b1e90361a9dfe2a33e52c952448/invoke.js"></scr' + 'ipt>');
+            </script>
+        </div>
+    </div>
+</div>
     
 </body>
 </html>
